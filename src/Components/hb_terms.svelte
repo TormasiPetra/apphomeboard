@@ -1,5 +1,17 @@
-<script>
+<script lang="ts">
+  function scrollToSectionWithOffset(id: string) {
+    const section = document.getElementById(id);
+    if (section) {
+      const offset = 100; // Define the offset (20px in this case)
+      const topPosition =
+        section.getBoundingClientRect().top + window.scrollY - offset;
+
+      // Scroll to the calculated position smoothly
+      window.scrollTo({ top: topPosition, behavior: "smooth" });
+    }
+  }
 </script>
+
 
 <div data-custom-class="body">
   <div style="text-align: left;">
@@ -291,42 +303,36 @@
     </div>
     <div class="MsoNormal" style="line-height: 1.5;"><br /></div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a href="#services"
+      <button on:click={() => scrollToSectionWithOffset("services")} 
         ><span data-custom-class="link"
           ><span style="color: rgb(0, 58, 250); font-size: 15px;"
             ><span data-custom-class="body_text">1. OUR SERVICES</span></span
           ></span
-        ></a
+        ></button
       >
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#ip"
+      <button on:click={() => scrollToSectionWithOffset("ip")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250);"
           ><span data-custom-class="body_text"
             >2. INTELLECTUAL PROPERTY RIGHTS</span
           ></span
-        ></a
+        ></button
       >
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#userreps"></a><a
+      <button on:click={() => scrollToSectionWithOffset("userreps")} data-custom-class="link" ></button><button on:click={() => scrollToSectionWithOffset("userreps")}
         data-custom-class="link"
-        href="#userreps"
+        
         ><span style="color: rbg(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">3. USER REPRESENTATIONS</span
           ></span
-        ></a
+        ></button
       >
     </div>
+    
     <div class="MsoNormal" style="line-height: 1.5;">
-      <span style="font-size: 15px;"
-        ><span data-custom-class="body_text"
-          ><bdt class="block-component"></bdt></span
-        ></span
-      > <a data-custom-class="link" href="#products"></a>
-    </div>
-    <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#products"
+      <button on:click={() => scrollToSectionWithOffset("products")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text"
             ><bdt class="block-component"></bdt><bdt class="block-component"
@@ -334,26 +340,26 @@
               class="statement-end-if-in-editor"
             ></bdt></span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#purchases"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("purchases")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#purchases"
+      <button on:click={() => scrollToSectionWithOffset("purchases")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text"
             ><bdt class="block-component"></bdt>5. PURCHASES AND PAYMENT<bdt
               class="statement-end-if-in-editor"
             ></bdt></span
           ></span
-        ></a
+        ></button
       >
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
       <bdt class="block-component"><span style="font-size: 15px;"></span></bdt
-      ><a data-custom-class="link" href="#subscriptions"
+      ><button on:click={() => scrollToSectionWithOffset("subscriptions")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">6. SUBSCRIPTIONS</span></span
-        ></a
+        ></button
       ><bdt class="statement-end-if-in-editor"
         ><span style="font-size: 15px;"></span></bdt
       >
@@ -364,71 +370,55 @@
           ><bdt class="block-component"></bdt><bdt class="block-component"
           ></bdt></span
         ></span
-      ><a data-custom-class="link" href="#returnyes"
+      ><button on:click={() => scrollToSectionWithOffset("returnyes")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text"
             >7. <bdt class="block-component"></bdt>REFUNDS<bdt
               class="block-component"
             ></bdt> POLICY</span
           ></span
-        ></a
+        ></button
       ><span style="font-size: 15px;"
         ><span data-custom-class="body_text"
           ><bdt class="block-component"></bdt><bdt
             class="statement-end-if-in-editor"
           ></bdt></span
         ></span
-      > <a data-custom-class="link" href="#software"></a>
-      <a data-custom-class="link" href="#software"></a>
+      > <button on:click={() => scrollToSectionWithOffset("software")} data-custom-class="link" ></button>
+        <button on:click={() => scrollToSectionWithOffset("software")} data-custom-class="link" ></button>
     </div>
+    
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#software"
-        ><span style="color: rgb(0, 58, 250); font-size: 15px;"
-          ><span data-custom-class="body_text"
-            ><bdt class="block-component"></bdt></span
-          ></span
-        ></a
-      > <a data-custom-class="link" href="#prohibited"></a>
-    </div>
-    <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#prohibited"
+      <button on:click={() => scrollToSectionWithOffset("prohibited")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">8. PROHIBITED ACTIVITIES</span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#ugc"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("ugc")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#ugc"
+      <button on:click={() => scrollToSectionWithOffset("ugc")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text"
             >9. USER GENERATED CONTRIBUTIONS</span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#license"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("license")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#license"
+      <button on:click={() => scrollToSectionWithOffset("license")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text"
             >10. CONTRIBUTION <bdt class="block-component"></bdt>LICENSE<bdt
               class="statement-end-if-in-editor"
             ></bdt></span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#reviews"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("reviews")} data-custom-class="link" ></button>
     </div>
+    
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#reviews"
-        ><span style="color: rgb(0, 58, 250); font-size: 15px;"
-          ><span data-custom-class="body_text"
-            ><bdt class="block-component"></bdt></span
-          ></span
-        ></a
-      > <a data-custom-class="link" href="#mobile"></a>
-    </div>
-    <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#mobile"
+      <button on:click={() => scrollToSectionWithOffset("mobile")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text"
             ><bdt class="block-component"></bdt>11. MOBILE APPLICATION
@@ -436,178 +426,128 @@
               class="statement-end-if-in-editor"
             ></bdt><bdt class="statement-end-if-in-editor"></bdt></span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#socialmedia"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("socialmedia")} data-custom-class="link" ></button>
     </div>
+    
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#socialmedia"
-        ><span style="color: rgb(0, 58, 250); font-size: 15px;"
-          ><span data-custom-class="body_text"
-            ><bdt class="block-component"></bdt></span
-          ></span
-        ></a
-      > <a data-custom-class="link" href="#thirdparty"></a>
-    </div>
-    <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#thirdparty"
+      <button on:click={() => scrollToSectionWithOffset("thirdparty")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text"
             ><bdt class="block-component"></bdt>12. THIRD-PARTY WEBSITES AND
             CONTENT<bdt class="statement-end-if-in-editor"></bdt></span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#advertisers"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("advertisers")} data-custom-class="link" ></button>
     </div>
+    
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#advertisers"
-        ><span style="color: rgb(0, 58, 250); font-size: 15px;"
-          ><span data-custom-class="body_text"
-            ><bdt class="block-component"></bdt></span
-          ></span
-        ></a
-      > <a data-custom-class="link" href="#sitemanage"></a>
-    </div>
-    <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#sitemanage"
+      <button on:click={() => scrollToSectionWithOffset("sitemanage")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">13. SERVICES MANAGEMENT</span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#ppyes"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("ppyes")} data-custom-class="link" ></button>
     </div>
+    
+    
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#ppyes"
-        ><span style="color: rgb(0, 58, 250); font-size: 15px;"
-          ><span data-custom-class="body_text"
-            ><bdt class="block-component"></bdt></span
-          ></span
-        ></a
-      > <a data-custom-class="link" href="#ppno"></a>
-    </div>
-    <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#ppno"
-        ><span style="color: rgb(0, 58, 250); font-size: 15px;"
-          ><span data-custom-class="body_text"
-            ><bdt class="block-component"></bdt></span
-          ></span
-        ></a
-      > <a data-custom-class="link" href="#dmca"></a>
-    </div>
-    <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#dmca"
-        ><span style="color: rgb(0, 58, 250); font-size: 15px;"
-          ><span data-custom-class="body_text"
-            ><bdt class="block-component"></bdt><bdt class="block-component"
-            ></bdt><bdt class="statement-end-if-in-editor"></bdt></span
-          ></span
-        ></a
-      >
-    </div>
-    <div class="MsoNormal" style="line-height: 1.5;">
-      <span style="font-size: 15px;"
-        ><span data-custom-class="body_text"
-          ><bdt class="block-component"></bdt><bdt class="block-component"
-          ></bdt><bdt class="block-component"></bdt></span
-        ></span
-      > <a data-custom-class="link" href="#terms"></a>
-    </div>
-    <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#terms"
+      <button on:click={() => scrollToSectionWithOffset("terms")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">14. TERM AND TERMINATION</span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#modifications"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("modifications")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#modifications"
+      <button on:click={() => scrollToSectionWithOffset("modifications")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text"
             >15. MODIFICATIONS AND INTERRUPTIONS</span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#law"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("law")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#law"
+      <button on:click={() => scrollToSectionWithOffset("law")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">16. GOVERNING LAW</span></span
-        ></a
-      > <a data-custom-class="link" href="#disputes"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("disputes")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#disputes"
+      <button on:click={() => scrollToSectionWithOffset("disputes")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">17. DISPUTE RESOLUTION</span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#corrections"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("corrections")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#corrections"
+      <button on:click={() => scrollToSectionWithOffset("corrections")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">18. CORRECTIONS</span></span
-        ></a
-      > <a data-custom-class="link" href="#disclaimer"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("disclaimer")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#disclaimer"
+      <button on:click={() => scrollToSectionWithOffset("disclaimer")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">19. DISCLAIMER</span></span
-        ></a
-      > <a data-custom-class="link" href="#liability"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("liability")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#liability"
+      <button on:click={() => scrollToSectionWithOffset("liability")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text"
             >20. LIMITATIONS OF LIABILITY</span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#indemnification"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("indemnification")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#indemnification"
+      <button on:click={() => scrollToSectionWithOffset("indemnification")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">21. INDEMNIFICATION</span></span
-        ></a
-      > <a data-custom-class="link" href="#userdata"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("userdata")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#userdata"
+      <button on:click={() => scrollToSectionWithOffset("userdata")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">22. USER DATA</span></span
-        ></a
-      > <a data-custom-class="link" href="#electronic"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("electronic")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#electronic"
+      <button on:click={() => scrollToSectionWithOffset("electronic")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text"
             >23. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#california"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("california")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
       <bdt class="block-component"><span style="font-size: 15px;"></span></bdt>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#california"
+      <button on:click={() => scrollToSectionWithOffset("california")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text"
             ><bdt class="block-component"></bdt>24. CALIFORNIA USERS AND
             RESIDENTS<bdt class="statement-end-if-in-editor"></bdt></span
           ></span
-        ></a
-      > <a data-custom-class="link" href="#misc"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("misc")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#misc"
+      <button on:click={() => scrollToSectionWithOffset("misc")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">25. MISCELLANEOUS</span></span
-        ></a
-      > <a data-custom-class="link" href="#contact"></a>
+        ></button
+      > <button on:click={() => scrollToSectionWithOffset("contact")} data-custom-class="link" ></button>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
       <bdt class="block-component"></bdt>
@@ -640,10 +580,10 @@
       <bdt class="block-component"></bdt>
     </div>
     <div class="MsoNormal" style="line-height: 1.5;">
-      <a data-custom-class="link" href="#contact"
+      <button on:click={() => scrollToSectionWithOffset("contact")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">26. CONTACT US</span></span
-        ></a
+        ></button
       >
     </div>
   </div>
@@ -788,10 +728,10 @@
         >Subject to your compliance with these Legal Terms, including the <bdt
           class="block-component"
         ></bdt>"<bdt class="statement-end-if-in-editor"></bdt></span
-      ><a data-custom-class="link" href="#prohibited"
+      ><button on:click={() => scrollToSectionWithOffset("prohibited")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           >PROHIBITED ACTIVITIES</span
-        ></a
+        ></button
       ><span style="font-size: 15px;"
         ><bdt class="block-component"></bdt>"<bdt
           class="statement-end-if-in-editor"
@@ -922,10 +862,10 @@
     >
       <span style="font-size: 15px;"
         >Please review this section and the <bdt class="block-component"
-        ></bdt>"<bdt class="statement-end-if-in-editor"></bdt><a
+        ></bdt>"<bdt class="statement-end-if-in-editor"></bdt><button on:click={() => scrollToSectionWithOffset("prohibited")}
           data-custom-class="link"
-          href="#prohibited"
-          ><span style="color: rgb(0, 58, 250);">PROHIBITED ACTIVITIES</span></a
+          
+          ><span style="color: rgb(0, 58, 250);">PROHIBITED ACTIVITIES</span></button
         ><bdt class="block-component"></bdt>"<bdt
           class="statement-end-if-in-editor"
         ></bdt> section carefully prior to using our Services to understand the (a)
@@ -973,10 +913,10 @@
           >confirm that you have read and agree with our <bdt
             class="block-component"
           ></bdt>"<bdt class="statement-end-if-in-editor"></bdt></span
-        ><a data-custom-class="link" href="#prohibited"
+        ><button on:click={() => scrollToSectionWithOffset("prohibited")} data-custom-class="link" 
           ><span style="color: rgb(0, 58, 250); font-size: 15px;"
             >PROHIBITED ACTIVITIES</span
-          ></a
+          ></button
         ><span style="font-size: 15px;"
           ><bdt class="block-component"></bdt>"<bdt
             class="statement-end-if-in-editor"

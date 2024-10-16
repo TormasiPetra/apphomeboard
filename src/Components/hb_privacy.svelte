@@ -1,5 +1,17 @@
 <script lang="ts">
+  function scrollToSectionWithOffset(id: string) {
+    const section = document.getElementById(id);
+    if (section) {
+      const offset = 100; // Define the offset (20px in this case)
+      const topPosition =
+        section.getBoundingClientRect().top + window.scrollY - offset;
+
+      // Scroll to the calculated position smoothly
+      window.scrollTo({ top: topPosition, behavior: "smooth" });
+    }
+  }
 </script>
+
 
 <div class="mt-10" data-custom-class="body">
   <div style="text-align: center;">
@@ -220,16 +232,17 @@
           </em></strong
         ></span
       ></span
-    ><a data-custom-class="link" href="#toc"
+    ><button
+    on:click={() => scrollToSectionWithOffset("toc")} data-custom-class="link"
       ><span style="color: rgb(0, 58, 250); font-size: 15px;"
         ><span data-custom-class="body_text"
           ><strong><em>table of contents</em></strong></span
         ></span
-      ></a
+      ></button
     ><span style="font-size: 15px;"
       ><span data-custom-class="body_text"
         ><strong
-          ><em> below to find the section you are looking for.</em></strong
+          ><em>&nbsp;below to find the section you are looking for.</em></strong
         ></span
       ></span
     >
@@ -243,12 +256,13 @@
         on how you interact with us and the Services, the choices you make, and the
         products and features you use. Learn more about
       </span></span
-    ><a data-custom-class="link" href="#personalinfo"
+    ><button
+    on:click={() => scrollToSectionWithOffset("personalinfo")} data-custom-class="link"
       ><span style="color: rgb(0, 58, 250); font-size: 15px;"
         ><span data-custom-class="body_text"
           >personal information you disclose to us</span
         ></span
-      ></a
+      ></button
     ><span data-custom-class="body_text">.</span>
   </div>
   <div style="line-height: 1.5;"><br /></div>
@@ -287,12 +301,13 @@
         your information for other purposes with your consent. We process your information
         only when we have a valid legal reason to do so. Learn more about
       </span></span
-    ><a data-custom-class="link" href="#infouse"
+    ><button
+    on:click={() => scrollToSectionWithOffset("infouse")} data-custom-class="link"
       ><span style="color: rgb(0, 58, 250); font-size: 15px;"
         ><span data-custom-class="body_text"
           >how we process your information</span
         ></span
-      ></a
+      ></button
     ><span data-custom-class="body_text">.</span>
   </div>
   <div style="line-height: 1.5;"><br /></div>
@@ -309,12 +324,13 @@
         <bdt class="statement-end-if-in-editor"></bdt>third parties. Learn more
         about
       </span></span
-    ><a data-custom-class="link" href="#whoshare"
+    ><button
+    on:click={() => scrollToSectionWithOffset("whoshare")} data-custom-class="link"
       ><span style="color: rgb(0, 58, 250); font-size: 15px;"
         ><span data-custom-class="body_text"
           >when and with whom we share your personal information</span
         ></span
-      ></a
+      ></button
     ><span style="font-size: 15px;"
       ><span data-custom-class="body_text"
         >.<bdt class="block-component"></bdt></span
@@ -338,12 +354,13 @@
         ></bdt> third parties will not be able to defeat our security and improperly
         collect, access, steal, or modify your information. Learn more about
       </span></span
-    ><a data-custom-class="link" href="#infosafe"
+    ><button
+    on:click={() => scrollToSectionWithOffset("infosafe")} data-custom-class="link" 
       ><span style="color: rgb(0, 58, 250); font-size: 15px;"
         ><span data-custom-class="body_text"
           >how we keep your information safe</span
         ></span
-      ></a
+      ></button
     ><span data-custom-class="body_text">.</span><span style="font-size: 15px;"
       ><span data-custom-class="body_text"
         ><bdt class="statement-end-if-in-editor"></bdt></span
@@ -358,10 +375,11 @@
         geographically, the applicable privacy law may mean you have certain rights
         regarding your personal information. Learn more about
       </span></span
-    ><a data-custom-class="link" href="#privacyrights"
+    ><button
+    on:click={() => scrollToSectionWithOffset("privacyrights")} data-custom-class="link"
       ><span style="color: rgb(0, 58, 250); font-size: 15px;"
         ><span data-custom-class="body_text">your privacy rights</span></span
-      ></a
+      ></button
     ><span data-custom-class="body_text">.</span>
   </div>
   <div style="line-height: 1.5;"><br /></div>
@@ -395,12 +413,13 @@
       ><span data-custom-class="body_text"
         >Want to learn more about what we do with any information we collect?
       </span></span
-    ><a data-custom-class="link" href="#/toc"
+    ><button
+    on:click={() => scrollToSectionWithOffset("toc")} data-custom-class="link" 
       ><span style="color: rgb(0, 58, 250); font-size: 15px;"
         ><span data-custom-class="body_text"
           >Review the Privacy Notice in full</span
         ></span
-      ></a
+      ></button
     ><span style="font-size: 15px;"
       ><span data-custom-class="body_text">.</span></span
     >
@@ -422,26 +441,29 @@
   <div style="line-height: 1.5;"><br /></div>
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
-      ><a data-custom-class="link" href="#infocollect"
+      ><button
+      on:click={() => scrollToSectionWithOffset("infocollect")} data-custom-class="link"
         ><span style="color: rgb(0, 58, 250);"
           >1. WHAT INFORMATION DO WE COLLECT?</span
-        ></a
+        ></button
       ></span
     >
   </div>
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
-      ><a data-custom-class="link" href="#infouse"
+      ><button
+      on:click={() => scrollToSectionWithOffset("infouse")} data-custom-class="link"
         ><span style="color: rgb(0, 58, 250);"
           >2. HOW DO WE PROCESS YOUR INFORMATION?<bdt class="block-component"
           ></bdt></span
-        ></a
+        ></button
       ></span
     >
   </div>
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
-      ><a data-custom-class="link" href="#legalbases"
+      ><button
+      on:click={() => scrollToSectionWithOffset("legalbases")} data-custom-class="link"
         ><span style="color: rgb(0, 58, 250);"
           >3. <span style="font-size: 15px;"
             ><span style="color: rgb(0, 58, 250);"
@@ -449,15 +471,16 @@
               INFORMATION?</span
             ></span
           ><bdt class="statement-end-if-in-editor"></bdt></span
-        ></a
+        ></button
       ></span
     >
   </div>
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
       ><span style="color: rgb(0, 58, 250);"
-        ><a data-custom-class="link" href="#whoshare"
-          >4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a
+        ><button
+        on:click={() => scrollToSectionWithOffset("whoshare")} data-custom-class="link" 
+          >4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</button
         ></span
       ><span data-custom-class="body_text"
         ><bdt class="block-component"></bdt>
@@ -476,10 +499,11 @@
   </div>
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
-      ><a data-custom-class="link" href="#cookies"
+      ><button
+      on:click={() => scrollToSectionWithOffset("cookies")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250);"
           >5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</span
-        ></a
+        ></button
       ><span style="color: rgb(127, 127, 127);"
         ><span style="color: rgb(89, 89, 89);">
           <span data-custom-class="body_text"
@@ -492,10 +516,11 @@
     >
   </div>
   <div style="line-height: 1.5;">
-    <a data-custom-class="link" href="#ai"
+    <button
+  on:click={() => scrollToSectionWithOffset("ai")} data-custom-class="link" 
       ><span style="color: rgb (0, 58, 250);"
         >6. DO WE OFFER ARTIFICIAL INTELLIGENCE-BASED PRODUCTS?</span
-      ></a
+      ></button
     ><span style="font-size: 15px;"
       ><bdt class="statement-end-if-in-editor"></bdt></span
     >
@@ -519,10 +544,11 @@
   </div>
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
-      ><a data-custom-class="link" href="#intltransfers"
+      ><button
+      on:click={() => scrollToSectionWithOffset("intltransfers")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250);"
           >7. IS YOUR INFORMATION TRANSFERRED INTERNATIONALLY?</span
-        ></a
+        ></button
       ><span style="color: rgb(127, 127, 127);"
         ><span style="color: rgb(89, 89, 89);"
           ><span data-custom-class="body_text"
@@ -536,10 +562,11 @@
   </div>
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
-      ><a data-custom-class="link" href="#inforetain"
+      ><button
+      on:click={() => scrollToSectionWithOffset("inforetain")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250);"
           >8. HOW LONG DO WE KEEP YOUR INFORMATION?</span
-        ></a
+        ></button
       ><span style="color: rgb(127, 127, 127);"
         ><span style="color: rgb(89, 89, 89);"
           ><span data-custom-class="body_text"
@@ -555,10 +582,11 @@
   </div>
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
-      ><a data-custom-class="link" href="#infosafe"
+      ><button
+      on:click={() => scrollToSectionWithOffset("infosafe")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250);"
           >9. HOW DO WE KEEP YOUR INFORMATION SAFE?</span
-        ></a
+        ></button
       ><span style="color: rgb(127, 127, 127);"
         ><span style="color: rgb(89, 89, 89);"
           ><span data-custom-class="body_text"
@@ -574,10 +602,11 @@
   </div>
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
-      ><a data-custom-class="link" href="#infominors"
+      ><button
+      on:click={() => scrollToSectionWithOffset("infominors")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250);"
           >10. DO WE COLLECT INFORMATION FROM MINORS?</span
-        ></a
+        ></button
       ><span style="color: rgb(127, 127, 127);"
         ><span style="color: rgb(89, 89, 89);"
           ><span data-custom-class="body_text"
@@ -592,28 +621,31 @@
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
       ><span style="color: rgb(0, 58, 250);"
-        ><a data-custom-class="link" href="#privacyrights"
-          >11. WHAT ARE YOUR PRIVACY RIGHTS?</a
+        ><button
+        on:click={() => scrollToSectionWithOffset("privacyrights")} data-custom-class="link" 
+          >11. WHAT ARE YOUR PRIVACY RIGHTS?</button
         ></span
       ></span
     >
   </div>
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
-      ><a data-custom-class="link" href="#DNT"
+      ><button
+      on:click={() => scrollToSectionWithOffset("DNT")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250);"
           >12. CONTROLS FOR DO-NOT-TRACK FEATURES<bdt class="block-component"
           ></bdt></span
-        ></a
+        ></button
       ></span
     >
   </div>
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
-      ><a data-custom-class="link" href="#uslaws"
+      ><button
+      on:click={() => scrollToSectionWithOffset("uslaws")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250);"
           >13. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</span
-        ></a
+        ></button
       ></span
     ><bdt class="block-component"
       ><span style="font-size: 15px;"
@@ -622,10 +654,11 @@
     >
   </div>
   <div style="line-height: 1.5;">
-    <a data-custom-class="link" href="#otherlaws"
+    <button
+  on:click={() => scrollToSectionWithOffset("otherlaws")} data-custom-class="link" 
       ><span style="color: rgb(0, 58, 250); font-size: 15px;"
         >14. DO OTHER REGIONS HAVE SPECIFIC PRIVACY RIGHTS?</span
-      ></a
+      ></button
     ><span style="font-size: 15px;"
       ><bdt class="statement-end-if-in-editor"
         ><span data-custom-class="body_text"></span></bdt
@@ -643,25 +676,28 @@
   </div>
   <div style="line-height: 1.5;">
     <span style="font-size: 15px;"
-      ><a data-custom-class="link" href="#policyupdates"
+      ><button
+      on:click={() => scrollToSectionWithOffset("policyupdates")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250);"
           >15. DO WE MAKE UPDATES TO THIS NOTICE?</span
-        ></a
+        ></button
       ></span
     >
   </div>
   <div style="line-height: 1.5;">
-    <a data-custom-class="link" href="#contact"
+    <button
+  on:click={() => scrollToSectionWithOffset("contact")} data-custom-class="link" 
       ><span style="color: rgb(0, 58, 250); font-size: 15px;"
         >16. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</span
-      ></a
+      ></button
     >
   </div>
   <div style="line-height: 1.5;">
-    <a data-custom-class="link" href="#request"
+    <button
+  on:click={() => scrollToSectionWithOffset("request")} data-custom-class="link" 
       ><span style="color: rgb(0, 58, 250);"
         >17. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</span
-      ></a
+      ></button
     >
   </div>
   <div style="line-height: 1.5;"><br /></div>
@@ -1834,9 +1870,10 @@
                                                                           ></bdt></span
                                                                         ></span
                                                                       ></span
-                                                                    ><a
+                                                                    ><button
+                                                                    on:click={() => scrollToSectionWithOffset("privacyrights")}
                                                                       data-custom-class="link"
-                                                                      href="#privacyrights"
+                                                                      
                                                                       ><span
                                                                         style="font-size: 15px; color: rgb(0, 58, 250);"
                                                                         ><span
@@ -1850,7 +1887,7 @@
                                                                             RIGHTS?</span
                                                                           ></span
                                                                         ></span
-                                                                      ></a
+                                                                      ></button
                                                                     ><span
                                                                       style="font-size: 15px; color: rgb(89, 89, 89);"
                                                                       ><span
@@ -2166,11 +2203,12 @@
           ></bdt> consent) to use your personal information for a specific purpose.
           You can withdraw your consent at any time. Learn more about
         </span></span
-      ><a data-custom-class="link" href="#withdrawconsent"
+      ><button
+      on:click={() => scrollToSectionWithOffset("withdrawconsent")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           ><span data-custom-class="body_text">withdrawing your consent</span
           ></span
-        ></a
+        ></button
       ><span data-custom-class="body_text">.</span>
     </li>
   </ul>
@@ -2204,7 +2242,7 @@
                 ></span
               >
             </div>
-            <ul style="margin-left: 40px;">
+            <ul>
               <li data-custom-class="body_text" style="line-height: 1.5;">
                 <span data-custom-class="body_text"
                   ><span style="font-size: 15px;"
@@ -2223,7 +2261,7 @@
                               ></span
                             >
                           </div>
-                          <ul style="margin-left: 40px;">
+                          <ul>
                             <li
                               data-custom-class="body_text"
                               style="line-height: 1.5;"
@@ -2259,7 +2297,7 @@
                                                   ></span
                                                 >
                                               </div>
-                                              <ul style="margin-left: 40px;">
+                                              <ul>
                                                 <li
                                                   data-custom-class="body_text"
                                                   style="line-height: 1.5;"
@@ -2491,9 +2529,10 @@
                                                                     consent). You
                                                                     can
                                                                   </span></span
-                                                                ><a
+                                                                ><button
+                                                                on:click={() => scrollToSectionWithOffset("withdrawconsent")}
                                                                   data-custom-class="link"
-                                                                  href="#withdrawconsent"
+                                                                  
                                                                   ><span
                                                                     data-custom-class="body_text"
                                                                     ><span
@@ -2502,7 +2541,7 @@
                                                                       your
                                                                       consent</span
                                                                     ></span
-                                                                  ></a
+                                                                  ></button
                                                                 ><span
                                                                   data-custom-class="body_text"
                                                                   ><span
@@ -3894,10 +3933,11 @@
         ></bdt></span
       ></span
     ><span data-custom-class="body_text"
-      ><a data-custom-class="link" href="#uslaws"
+      ><button
+      on:click={() => scrollToSectionWithOffset("uslaws")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           >DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</span
-        ></a
+        ></button
       ></span
     ><span style="font-size: 15px;"
       ><span data-custom-class="body_text"
@@ -4061,10 +4101,11 @@
         ></bdt><bdt class="block-component"></bdt></span
       ></span
     ><span data-custom-class="body_text"
-      ><a data-custom-class="link" href="#legalbases"
+      ><button
+      on:click={() => scrollToSectionWithOffset("legalbases")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           >WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?</span
-        ></a
+        ></button
       ><span style="font-size: 15px;"
         ><bdt class="else-block"></bdt><bdt class="block-component"></bdt>"<bdt
           class="statement-end-if-in-editor"
@@ -4296,12 +4337,13 @@
       parties with whom we may share your personal information (see <bdt
         class="block-component"
       ></bdt>"<bdt class="statement-end-if-in-editor"></bdt></span
-    ><a data-custom-class="link" href="#whoshare"
+    ><button
+    on:click={() => scrollToSectionWithOffset("whoshare")} data-custom-class="link" 
       ><span style="font-size: 15px;"
         ><span style="color: rgb(0, 58, 250);"
           >WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</span
         ></span
-      ></a
+      ></button
     ><span style="font-size: 15px; color: rgb(89, 89, 89);"
       ><span style="font-size: 15px; color: rgb(89, 89, 89);"
         ><span data-custom-class="body_text"
@@ -4785,14 +4827,15 @@
           ></bdt></span
         ></span
       ></span
-    ><a data-custom-class="link" href="#contact"
+    ><button
+    on:click={() => scrollToSectionWithOffset("contact")} data-custom-class="link" 
       ><span style="font-size: 15px; color: rgb(0, 58, 250);"
         ><span style="font-size: 15px; color: rgb(0, 58, 250);"
           ><span data-custom-class="body_text"
             >HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</span
           ></span
         ></span
-      ></a
+      ></button
     ><span style="font-size: 15px; color: rgb(89, 89, 89);"
       ><span style="font-size: 15px; color: rgb(89, 89, 89);"
         ><span data-custom-class="body_text"
@@ -4910,14 +4953,15 @@
           ></bdt></span
         ></span
       ></span
-    ><a data-custom-class="link" href="#contact"
+    ><button
+    on:click={() => scrollToSectionWithOffset("contact")} data-custom-class="link" 
       ><span style="font-size: 15px; color: rgb(0, 58, 250);"
         ><span style="font-size: 15px; color: rgb(0, 58, 250);"
           ><span data-custom-class="body_text"
             >HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</span
           ></span
         ></span
-      ></a
+      ></button
     ><span style="font-size: 15px; color: rgb(89, 89, 89);"
       ><span style="font-size: 15px; color: rgb(89, 89, 89);"
         ><span data-custom-class="body_text"
@@ -5727,10 +5771,11 @@
         ></bdt>"<bdt class="statement-end-if-in-editor"></bdt></span
       ></span
     ><span data-custom-class="body_text"
-      ><a data-custom-class="link" href="#infocollect"
+      ><button
+      on:click={() => scrollToSectionWithOffset("infocollect")} data-custom-class="link" 
         ><span style="color: rgb (0, 58, 250); font-size: 15px;"
           >WHAT INFORMATION DO WE COLLECT?</span
-        ></a
+        ></button
       ></span
     ><span style="font-size: 15px;"
       ><span data-custom-class="body_text"
@@ -5758,10 +5803,11 @@
       >Learn about how we use your personal information in the section, <bdt
         class="block-component"
       ></bdt>"<bdt class="statement-end-if-in-editor"></bdt></span
-    ><a data-custom-class="link" href="#infouse"
+    ><button
+    on:click={() => scrollToSectionWithOffset("infouse")} data-custom-class="link" 
       ><span style="color: rgb(0, 58, 250); font-size: 15px;"
         >HOW DO WE PROCESS YOUR INFORMATION?</span
-      ></a
+      ></button
     ><span data-custom-class="body_text" style="font-size: 15px;"
       ><bdt class="block-component"></bdt>"</span
     ><bdt class="statement-end-if-in-editor"
@@ -5835,12 +5881,13 @@
           ></bdt></span
         ></span
       ></span
-    ><a data-custom-class="link" href="#whoshare"
+    ><button
+    on:click={() => scrollToSectionWithOffset("whoshare")} data-custom-class="link" 
       ><span style="font-size: 15px; color: rgb(0, 58, 250);"
         ><span style="font-size: 15px; color: rgb(0, 58, 250);"
           >WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</span
         ></span
-      ></a
+      ></button
     ><span style="font-size: 15px; color: rgb(89, 89, 89);"
       ><span style="font-size: 15px; color: rgb(89, 89, 89);"
         ><span data-custom-class="body_text"
@@ -6000,11 +6047,12 @@
                                   ></bdt><span style="font-size: 15px;"
                                     ><span style="color: rgb(89, 89, 89);"
                                       ><span style="color: rgb(0, 58, 250);"
-                                        ><a
+                                        ><button
+                                        on:click={() => scrollToSectionWithOffset("whoshare")}
                                           data-custom-class="link"
-                                          href="#whoshare"
+                                          
                                           >WHEN AND WITH WHOM DO WE SHARE YOUR
-                                          PERSONAL INFORMATION?</a
+                                          PERSONAL INFORMATION?</button
                                         ></span
                                       ><span style="font-size: 15px;"
                                         ><span style="color: rgb(89, 89, 89);"
@@ -6644,10 +6692,11 @@
         ></bdt></span
       ></span
     ><span data-custom-class="body_text"
-      ><a data-custom-class="link" href="#contact"
+      ><button
+      on:click={() => scrollToSectionWithOffset("contact")} data-custom-class="link" 
         ><span style="color: rgb(0, 58, 250); font-size: 15px;"
           >HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</span
-        ></a
+        ></button
       ></span
     ><span style="font-size: 15px;"
       ><span data-custom-class="body_text"
@@ -6841,15 +6890,16 @@
           your personal information. You can make such a request by contacting
           us by using the contact details provided in the section <bdt
             class="block-component"
-          ></bdt>"<bdt class="statement-end-if-in-editor"></bdt><a
+          ></bdt>"<bdt class="statement-end-if-in-editor"></bdt><button
+          on:click={() => scrollToSectionWithOffset("request")}
             data-custom-class="link"
-            href="#request"
+            
             ><span style="color: rgb(0, 58, 250);"
               ><span data-custom-class="link"
                 >HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM
                 YOU?</span
               ></span
-            ></a
+            ></button
           ><bdt class="block-component"></bdt>"</span
         ><bdt class="statement-end-if-in-editor"
           ><span data-custom-class="body_text"></span></bdt
@@ -6920,13 +6970,14 @@
           ></bdt>"<bdt class="statement-end-if-in-editor"></bdt></span
         ></span
       ><span data-custom-class="link"
-        ><a href="#request"
+        ><button
+        on:click={() => scrollToSectionWithOffset("request")} 
           ><span style="color: rgb(0, 58, 250); font-size: 15px;"
             ><span data-custom-class="link"
               >HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM
               YOU?</span
             ></span
-          ></a
+          ></button
         ></span
       ><span style="font-size: 15px;"
         ><span data-custom-class="body_text"
